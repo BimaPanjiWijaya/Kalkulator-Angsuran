@@ -66,10 +66,10 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-900 px-4 py-10 text-slate-200">
       <main className="w-full max-w-[460px] rounded-xl bg-slate-800 p-7 shadow-2xl">
-        <h1 className="text-xl font-bold text-sky-400">
+        <h1 className="text-xl font-bold text-sky-400 text-center">
           PT. INOVASI MITRA SEJATI
         </h1>
-        <h2 className="mt-1 text-xl font-semibold text-sky-400">
+        <h2 className="mt-1 text-xl font-semibold text-sky-400 text-center">
           Kalkulator Angsuran Kredit
         </h2>
 
