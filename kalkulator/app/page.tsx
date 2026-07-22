@@ -111,16 +111,21 @@ export default function Home() {
 
         <form className="mt-6 space-y-4" onSubmit={hitungAngsuran}>
           <div>
-            <label className="mb-1.5 block text-sm font-medium text-slate-300" htmlFor="otr">
+            <label
+              className="mb-1.5 block text-sm font-medium text-slate-300"
+              htmlFor="otr"
+            >
               Harga OTR
             </label>
             <div className="flex items-center rounded-xl border border-slate-700 bg-slate-900/80 px-3 focus-within:border-cyan-300/70 focus-within:ring-2 focus-within:ring-cyan-300/20">
-              <span className="pr-2 text-sm font-semibold text-cyan-200">Rp</span>
+              <span className="pr-2 text-sm font-semibold text-cyan-200">
+                Rp
+              </span>
               <input
                 id="otr"
                 type="text"
                 inputMode="numeric"
-                placeholder="240.000.000"
+                placeholder="xxx.xxx.xxx"
                 value={otrInput}
                 onChange={(event) => handleOtrChange(event.target.value)}
                 className="w-full bg-transparent py-3 text-base text-slate-100 outline-none placeholder:text-slate-500"
@@ -129,7 +134,10 @@ export default function Home() {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-sm font-medium text-slate-300" htmlFor="dpPercent">
+            <label
+              className="mb-1.5 block text-sm font-medium text-slate-300"
+              htmlFor="dpPercent"
+            >
               Down Payment (%)
             </label>
             <input
@@ -138,7 +146,7 @@ export default function Home() {
               min={0}
               max={100}
               inputMode="decimal"
-              placeholder="20"
+              placeholder="xxx %"
               value={dpPercentInput}
               onChange={(event) => setDpPercentInput(event.target.value)}
               className="w-full rounded-xl border border-slate-700 bg-slate-900/80 px-3 py-3 text-base outline-none ring-cyan-300/20 placeholder:text-slate-500 focus:border-cyan-300/70 focus:ring-2"
@@ -146,7 +154,10 @@ export default function Home() {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-sm font-medium text-slate-300" htmlFor="tenor">
+            <label
+              className="mb-1.5 block text-sm font-medium text-slate-300"
+              htmlFor="tenor"
+            >
               Jangka Waktu (bulan)
             </label>
             <input
@@ -154,7 +165,7 @@ export default function Home() {
               type="number"
               min={1}
               inputMode="numeric"
-              placeholder="18"
+              placeholder="xxx"
               value={tenorInput}
               onChange={(event) => setTenorInput(event.target.value)}
               className="w-full rounded-xl border border-slate-700 bg-slate-900/80 px-3 py-3 text-base outline-none ring-cyan-300/20 placeholder:text-slate-500 focus:border-cyan-300/70 focus:ring-2"
@@ -179,11 +190,15 @@ export default function Home() {
           <section className="mt-6 rounded-2xl border border-slate-700/80 bg-slate-950/80 p-4">
             <div className="flex items-center justify-between border-b border-slate-800 py-2 text-sm">
               <span className="text-slate-300">DP Nominal</span>
-              <span className="font-semibold text-slate-100">{formatRupiah(hasil.dpNominal)}</span>
+              <span className="font-semibold text-slate-100">
+                {formatRupiah(hasil.dpNominal)}
+              </span>
             </div>
             <div className="flex items-center justify-between border-b border-slate-800 py-2 text-sm">
               <span className="text-slate-300">Pokok Utang</span>
-              <span className="font-semibold text-slate-100">{formatRupiah(hasil.pokokUtang)}</span>
+              <span className="font-semibold text-slate-100">
+                {formatRupiah(hasil.pokokUtang)}
+              </span>
             </div>
             <div className="flex items-center justify-between border-b border-slate-800 py-2 text-sm">
               <span className="text-slate-300">Bunga</span>
@@ -191,7 +206,9 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-between border-b border-slate-800 py-2 text-sm">
               <span className="text-slate-300">Total Pembayaran</span>
-              <span className="font-semibold text-slate-100">{formatRupiah(hasil.totalPembayaran)}</span>
+              <span className="font-semibold text-slate-100">
+                {formatRupiah(hasil.totalPembayaran)}
+              </span>
             </div>
             <div className="mt-1 flex items-center justify-between py-2 text-lg font-black text-emerald-300">
               <span>Angsuran / Bulan</span>
