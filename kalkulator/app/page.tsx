@@ -43,7 +43,12 @@ export default function Home() {
       return;
     }
 
-    if (otrValue <= 0 || tenorValue <= 0 || dpPercentValue < 0 || dpPercentValue > 100) {
+    if (
+      otrValue <= 0 ||
+      tenorValue <= 0 ||
+      dpPercentValue < 0 ||
+      dpPercentValue > 100
+    ) {
       setError("Cek lagi input: OTR & tenor harus > 0, DP harus 0-100.");
       setHasil(null);
       return;
@@ -61,8 +66,12 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-900 px-4 py-10 text-slate-200">
       <main className="w-full max-w-[460px] rounded-xl bg-slate-800 p-7 shadow-2xl">
-        <h1 className="text-xl font-bold text-sky-400">PT. INOVASI MITRA SEJATI</h1>
-        <h2 className="mt-1 text-xl font-semibold text-sky-400">Kalkulator Angsuran Kredit</h2>
+        <h1 className="text-xl font-bold text-sky-400">
+          PT. INOVASI MITRA SEJATI
+        </h1>
+        <h2 className="mt-1 text-xl font-semibold text-sky-400">
+          Kalkulator Angsuran Kredit
+        </h2>
 
         <form className="mt-5" onSubmit={hitungAngsuran}>
           <label className="mt-3 block text-sm text-slate-400" htmlFor="otr">
@@ -78,7 +87,10 @@ export default function Home() {
             className="mt-1.5 w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2.5 text-base outline-none ring-sky-400/50 transition focus:ring-2"
           />
 
-          <label className="mt-3 block text-sm text-slate-400" htmlFor="dpPercent">
+          <label
+            className="mt-3 block text-sm text-slate-400"
+            htmlFor="dpPercent"
+          >
             Down Payment (%)
           </label>
           <input
