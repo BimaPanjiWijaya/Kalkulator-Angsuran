@@ -146,7 +146,7 @@ export default function Home() {
               min={0}
               max={100}
               inputMode="decimal"
-              placeholder="xxx %"
+              placeholder="xxx"
               value={dpPercentInput}
               onChange={(event) => setDpPercentInput(event.target.value)}
               className="w-full rounded-xl border border-slate-700 bg-slate-900/80 px-3 py-3 text-base outline-none ring-cyan-300/20 placeholder:text-slate-500 focus:border-cyan-300/70 focus:ring-2"
