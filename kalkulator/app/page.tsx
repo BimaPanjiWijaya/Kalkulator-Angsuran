@@ -60,7 +60,7 @@ export default function Home() {
     const tenorValue = Number(tenorInput);
 
     if (!otrValue || !tenorValue || Number.isNaN(dpPercentValue)) {
-      setError("Semua field wajib diisi ya, Boss!");
+      setError("Semua field wajib diisi!");
       setHasil(null);
       return;
     }
