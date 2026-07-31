@@ -6,6 +6,7 @@ type HasilAngsuran = {
   dpNominal: number;
   pokokUtang: number;
   bunga: number;
+  bungaDalamRupiah: number;
   totalPembayaran: number;
   angsuranPerBulan: number;
 };
@@ -79,6 +80,7 @@ export default function Home() {
     const dpNominal = otrValue * (dpPercentValue / 100);
     const pokokUtang = otrValue - dpNominal;
     const bunga = hitungBunga(tenorValue);
+    const bungaDalamRupiah = bunga * pokokUtang;
     const totalPembayaran = pokokUtang + pokokUtang * bunga;
     const angsuranPerBulan = totalPembayaran / tenorValue;
 
@@ -87,6 +89,7 @@ export default function Home() {
       dpNominal,
       pokokUtang,
       bunga,
+      bungaDalamRupiah,
       totalPembayaran,
       angsuranPerBulan,
     });
@@ -203,6 +206,12 @@ export default function Home() {
             <div className="flex items-center justify-between border-b border-slate-800 py-2 text-sm">
               <span className="text-slate-300">Bunga</span>
               <span className="font-semibold text-slate-100">{bungaLabel}</span>
+            </div>
+            <div className="flex items-center justify-between border-b border-slate-800 py-2 text-sm">
+              <span className="text-slate-300">Bunga Dalam Rupiah</span>
+              <span className="font-semibold text-slate-100">
+                {formatRupiah(hasil.bungaDalamRupiah)}
+              </span>
             </div>
             <div className="flex items-center justify-between border-b border-slate-800 py-2 text-sm">
               <span className="text-slate-300">Total Pembayaran</span>
