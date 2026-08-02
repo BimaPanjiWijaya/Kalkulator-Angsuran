@@ -37,10 +37,10 @@ function hitungBunga(jangkaWaktu: number): number {
 }
 
 export default function Home() {
-  const [otrInput, setOtrInput] = useState<string>("");
-  const [dpPercentInput, setDpPercentInput] = useState<string>("");
-  const [tenorInput, setTenorInput] = useState<string>("");
-  const [error, setError] = useState<string>("");
+  const [otrInput, setOtrInput] = useState("");
+  const [dpPercentInput, setDpPercentInput] = useState("");
+  const [tenorInput, setTenorInput] = useState("");
+  const [error, setError] = useState("");
   const [hasil, setHasil] = useState<HasilAngsuran | null>(null);
 
   const bungaLabel = useMemo(() => {
@@ -48,7 +48,7 @@ export default function Home() {
     return `${(hasil.bunga * 100).toFixed(1).replace(".0", "")}%`;
   }, [hasil]);
 
-  function handleOtrChange(value: string): void {
+  function handleOtrChange(value: string) {
     const hanyaDigit = ambilDigit(value);
     setOtrInput(formatDigitDenganPemisah(hanyaDigit));
   }
