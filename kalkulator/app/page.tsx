@@ -145,7 +145,7 @@ export default function Home() {
             </label>
             <input
               id="dpPercent"
-              type="number"
+              type="text"
               min={0}
               max={100}
               inputMode="decimal"
